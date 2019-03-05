@@ -6,19 +6,7 @@ import builder.CriadorDeJogo;
 import dominio.Jogo;
 import dominio.Participante;
 
-class JogoTest {
-
-	@Test
-	void naoDeveAceitarDoisResultadosDoMesmoParticipante() {
-		Jogo jogo = new CriadorDeJogo()
-		.para("Teste Jogo")
-		.resultado(new Participante("Maria"), 150)
-		.resultado(new Participante("Maria"), 230)
-		.constroi();
-		
-		assertEquals(1, jogo.getResultados().size());
-		assertEquals(150, jogo.getResultados().get(0).getMetrica());
-	}
+class JogoTest {	
 	
 	@Test
 	void devePermitirVariosParticipantes() {
