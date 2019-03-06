@@ -41,7 +41,7 @@ class JogoTest {
 		add(new Resultado(participantes.get(3), 55));			
 		add(new Resultado(participantes.get(4), 20));	
 		
-	}};	
+	}};
 	
 	@Test
 	void ordenacaoResultadosPorMetrica() {					
@@ -86,7 +86,6 @@ class JogoTest {
 		}}, jogo.identificaPrimeirosColocadosJogo(numColocacoes));		
 	}
 	
-	
 	@Test
 	void devePermitirVariosParticipantes() {
 		Jogo jogo = new CriadorDeJogo()
@@ -107,6 +106,19 @@ class JogoTest {
 		
 	   assertFalse(jogo.getDescricao() == null);
 	   assertFalse(jogo.getDescricao().isEmpty());
+	}
+	
+	@Test
+	void devePermitirApenasUmParticipante() {
+		Jogo jogo = new Jogo("Jogo um participante");
+						
+		assertEquals(0, jogo.getResultados().size());
+		
+		jogo.anota(new Resultado(new Participante("Maria"), 100));
+		
+		assertEquals(1, jogo.getResultados().size());
+		
+		assertEquals(100.0, jogo.getResultados().get(0).getMetrica(), 0.00001);
 	}
 
 }
