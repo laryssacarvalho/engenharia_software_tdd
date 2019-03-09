@@ -1,6 +1,6 @@
 package dominio;
 
-public class Resultado {
+public class Resultado{
 
 	private Participante participante;
 	private double metrica;
@@ -17,4 +17,5 @@ public class Resultado {
 	public double getMetrica() {
 		return metrica;
 	}
+	
 }

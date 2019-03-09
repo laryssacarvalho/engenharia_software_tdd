@@ -18,6 +18,12 @@ public class CriadorDeJogo {
         jogo.anota(new Resultado(participante, metrica));
         return this;
     }
+    
+    public CriadorDeJogo adicionaResultado(Resultado resultado) {
+    	jogo.anota(resultado);
+    	return this;
+    }
+    
 
     public Jogo constroi() { 
         return jogo;
