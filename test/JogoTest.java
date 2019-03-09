@@ -47,7 +47,7 @@ class JogoTest {
 	void ordenacaoResultadosPorMetrica() {					
 		
 		Jogo jogo = new CriadorDeJogo()
-				.para("Teste OrdenaÁ„o por Metrica")
+				.para("Teste Ordena√ß√£o por Metrica")
 				.adicionaResultado(resultados.get(0))
 				.adicionaResultado(resultados.get(1))
 				.adicionaResultado(resultados.get(2))
@@ -90,13 +90,12 @@ class JogoTest {
 	void devePermitirVariosParticipantes() {
 		Jogo jogo = new CriadorDeJogo()
 		.para("Teste Jogo")
-		.resultado(new Participante("Jo„o"), 100)
+		.resultado(new Participante("Jo√£o"), 100)
 		.resultado(new Participante("Luisa"), 200)
 		.constroi();
 		
 		assertEquals(2, jogo.getResultados().size());
 	}
-
 	
 	@Test
 	void todoJogoTemDescricao() {
