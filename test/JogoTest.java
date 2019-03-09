@@ -18,5 +18,4 @@ class JogoTest {
 		
 		assertEquals(2, jogo.getResultados().size());
 	}
-
 }
